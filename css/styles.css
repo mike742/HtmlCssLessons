@@ -1,9 +1,33 @@
 body {
   font-family: Arial;
-  color: green;
-  text-align: justify;
+  color: black;
+  text-align: left;
 }
 
 hr {
   width: 50%;
+}
+
+/*
+div, span, em, b, i, u {
+  border: 1px solid red;
+  width: 150px;
+  height: 80px;
+  display: inline-block;
+}
+*/
+
+#nav {
+    /* border: 1px solid red; */
+    padding: 20px;
+    text-align: center;
+    list-style-type: none;
+    background-color: #d8db91;
+}
+
+#nav li {
+  font-size: 20px;
+  display: inline-block;
+  padding-left: 20px;
+  padding-right: 20px;
 }
