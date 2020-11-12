@@ -31,3 +31,62 @@ div, span, em, b, i, u {
   padding-left: 20px;
   padding-right: 20px;
 }
+
+* {
+  margin: 0px;
+}
+
+.red {
+  color: red;
+}
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+.underline {
+  text-decoration: underline;
+}
+
+h1:hover {
+  color: white;
+  background-color: green;
+}
+
+div {
+
+  /*
+  color: white;
+  background-color: green;
+  width: 200px;
+  height: 200px;
+  padding-left: 20px;
+  font-size: 30px;
+  display: none;*/
+}
+
+h3:hover + div {
+    display: block;
+}
+
+p:lang(en) {
+  background-color: limegreen;
+}
+
+p:lang(fr) {
+  background-color: #9cc7f7;
+}
+
+p:lang(ca) {
+  background-color: #ff6363;
+}
+
+li:nth-child(2n+0) {
+    background-color: #b5ffea;
+}
+
+[class$="str"] { /*  ^ - start; * - any; $ -end */
+  background: green;
+  color: white;
+}
