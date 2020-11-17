@@ -1,0 +1,58 @@
+@font-face {
+  font-family: MyFontName;
+  src: url("../Fonts/Janyss Brush.ttf");
+}
+
+p.myFont {
+  font-family: MyFontName;
+  font-size: 30px;
+}
+
+
+.center {
+  width: 300px;
+  padding: 125px 0;
+  border-color: #ccc;
+  text-align: center;
+  border: 1px solid red;
+  margin: auto;
+}
+
+/* DRY */
+:root {
+
+  --centered-height: 550px;
+  --txt-color: white;
+}
+
+.center2 {
+  width: 300px;
+  text-align: center;
+  border: 10px groove grey;
+  margin: auto;
+
+  height: var(--centered-height);
+  line-height: var(--centered-height);
+}
+
+.center2 p {
+  margin: 0;
+  padding: 0;
+}
+
+.center3 {
+    border: 1px solid green;
+    text-align: center;
+    width: 300px;
+
+    margin: auto;
+    display: table;
+    height: 350px;
+}
+
+
+.center3 p  {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
