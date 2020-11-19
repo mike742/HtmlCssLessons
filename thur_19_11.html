@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css\thur_19_11.css">
+  </head>
+  <body>
+
+    <div style="width: 300px; min-height: 200px; border: 2px solid red;">
+      <div style="width: 150px; min-height: 100px; border: 2px solid blue; float: right;">
+        <h3>Title 1</h3>
+        <p>sdfldj sld fjsl jflsdj flsd jflsj dlfsdj flsd fjlsdk jfsdl jl</p>
+      </div>
+
+      <p>FJLDF LD LD JL FLSJ LDJF LFDJSL KFSDL JLDSKF LDJF LDJF LDSJ FLDFJSL KFDSJL  LDJF LDJF LDSJ FLDFJSL KFDSJL  LDJF LDJF LDSJ FLDFJSL KFDSJL FJDSL FDLS JFDL JFDLS J</p>
+    </div>
+
+
+    <div class="div1">
+
+    </div>
+    <div class="div2">
+
+    </div>
+
+    <pre>
+      // PUT api/<StudentController>/5
+      [HttpPut("{id}")]
+      public void Put(int id, [FromBody] Student student)
+      {
+          Student st = _dbc.Students.Where(s => s.Id == student.Id).FirstOrDefault();
+
+          if (st != null)
+          {
+              st.Name = student.Name;
+              st.Email = student.Email;
+
+              _dbc.SaveChanges();
+          }
+      }
+    </pre>
+
+    <code class="project">loggin-asp</code>
+
+
+  </body>
+</html>

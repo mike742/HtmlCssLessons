@@ -1,0 +1,33 @@
+code.test:before {
+  content: '"';
+}
+
+code.test::after {
+  content: '"';
+}
+
+code.project::before {
+  content: 'RobertsonBP012235/';
+}
+code.project::after {
+  content: '/temp/.netcore/appsetting.json';
+}
+
+
+.div1 {
+  width: 300px;
+  height: 150px;
+  border: 2px solid blue;
+  padding: 30px;
+  box-sizing: border-box;
+  float: left;
+}
+
+.div2 {
+  width: 300px;
+  height: 150px;
+  border: 2px solid red;
+  box-sizing: border-box;
+  padding: 50px;
+  float: left;
+}
