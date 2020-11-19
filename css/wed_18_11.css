@@ -1,0 +1,38 @@
+body {
+  font-family: Arial;
+}
+
+a:link {
+  color: #00ff00; /* RGB */
+}
+
+a:visited {
+  color: red;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: alias;
+  cursor: all-scroll;
+  cursor: all-scroll;
+  cursor: grab;
+  cursor: wait;
+}
+
+a:active {
+  cursor: grabbing;
+  font-size: 30px;
+}
+
+table, th, td {
+  border: 1px solid #626363;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+table caption {
+  text-align: right;
+}
