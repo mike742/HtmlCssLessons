@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+    <script type="text/javascript">
+      var a;
+
+      const c = 5; // $ _  a-zA-Z 0-9
+      let _a1 = 11;
+      let l = 7;
+      let firstName = "John";
+      let firstname = 100;
+
+      l = 10;
+
+      var n = 30;
+      n *= l; // n = n + l;
+
+      let person = {  firstName: "Mark", lastName: "Smith", salary: 65000  };
+
+      person.firstName = "Lucy";
+      console.log( person.firstName + " " + person.lastName + " $" + person.salary );
+
+      console.log('\t hello \n' + 'Strings');
+
+      var dq = '"';
+      console.log(" " + '"' + "string" + '"' + " was his namo ");
+      console.log(" \"string\"  was his namo ");
+      console.log(' \'string\'  was his namo ');
+
+      console.log('c:\\temp\\index.html');
+
+      // +a + +b => Number.ParseInt(a)
+      let f = "5";
+      // && || !
+
+      var d = 6;
+      if(d === 1 ) {
+        console.log('Mon');
+      }
+      else if(d === 2) {
+        console.log('Thu');
+      }
+      else if(d === 3) {
+        console.log('Wed');
+      }
+      else {
+        console.log('I don\'t know!');
+      }
+
+      switch(d) {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+          console.log('Work day');
+          break;
+        case 6:
+        case 7:
+          console.log('Weekend');
+          break;
+        default:
+          console.log('I don\'t know!');
+      }
+
+
+      if(d >= 1 && d <= 5) {
+        console.log('Work day from if');
+      }
+      else if(d >= 6 && d <= 7) {
+        console.log('Weekend from if');
+      }
+      else {
+        console.log('I don\'t know from if!');
+      }
+
+/*
+      let i = 0;
+
+      while(i < 10) {
+        console.log(i);
+        i++;
+      }
+
+      i = 0;
+
+      do {
+        console.log(i);
+        i++;
+      }
+      while(i < 10);
+*/
+      let j = 0
+      for(;j < 5;) {
+        console.log(j)
+        ++j
+      }
+
+    </script>
+  </body>
+</html>
