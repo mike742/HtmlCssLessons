@@ -1,0 +1,45 @@
+body {
+  text-align: center;
+}
+
+h1,h2 {
+  text-transform: uppercase;
+}
+
+.strike-through {
+  text-decoration: line-through;
+}
+
+.gray-background {
+  background-color: gray;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+p {
+  text-align: justify;
+  border: 3px dashed red;
+  padding: 5px;
+  margin: 8px 50px;
+}
+
+.cities {
+  text-align: left;
+}
+
+.container {
+  width: 100%;
+  text-align: left;
+  display: table;
+}
+
+
+.container div {
+  display: table-cell;
+}
+.cont {
+  vertical-align: middle;
+  text-align: center;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="myScript.js"></script>
+
+    <script type="text/javascript">
+
+      function myFunction() {
+        var a = document.getElementById("inputA").value;
+        var b = document.getElementById("inputB").value;
+
+        document.getElementById("result").innerHTML
+          = "<i>a + b = </i>" + (+a + +b) + "<br />" +
+            "a - b = " + (+a - +b) + "<br />" +
+            "a * b = " + (+a * +b) + "<br />" +
+            "a / b = " + (+a / +b) + "<br />" +
+            "a % b = " + (+a % +b) + "<br />"
+            ;
+        //document.write(+a + +b);
+      }
+
+    </script>
+
+  </head>
+  <body>
+
+    <p id="demo">Quick brown fox...</p>
+
+    <input type="text" id="inputA" /> <br /><br />
+    <input type="text" id="inputB" /> <br /><br />
+
+    <input type="button" value="Click Me" onclick="myFunction()">
+
+    <p id="result"></p>
+
+    <script type="text/javascript">
+      /*
+      document.getElementById("demo").innerHTML = "Hello JavaScript";
+
+      document.write( "Hello JavaSript from document.write()" );
+
+      window.alert("Hello JavaScript in window alert");
+
+      console.log("Hello JavaScript from console");
+      */
+      // font-size => fontSize
+      document.getElementById("demo").style.fontSize = "35px";
+      document.getElementById("demo").style.color = "red";
+      // document.getElementById("demo").style.display = "none";
+
+      var a;
+
+      a = 22;
+      console.log( typeof a );
+      a = true;
+      console.log( typeof a );
+      a = "Hello Mike";
+      console.log( typeof a );
+      a = 22 + 33;
+      console.log( typeof a );
+      a = '77';
+      console.log( typeof a );
+
+      /*
+      a = prompt("Please, enter a");
+      var b = prompt("Please, enter b");
+
+      document.getElementById("demo").innerHTML =
+        Number.parseFloat(a) + Number.parseFloat(b); // + or Number.parseInt(a)
+        */
+
+    </script>
+
+  </body>
+</html>
