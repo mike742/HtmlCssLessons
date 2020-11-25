@@ -47,11 +47,34 @@
       let st3 = "John";
       let st4 = "Rosy";
 
-      let students = ["Mark", "Lucy", "John", "Rosy", "Mike"];
-                    //  0        1       2       3
+      let students = ["Mark", "Lucy", "John", "Rosy", "Mike", "Todd"];
+                    //  0        1       2       3      4
+      let person = { firstName: "Lucy", lastName: "Smith", salary: 100000, position: "Student" };
+      console.log( "Person:" );
+      console.log( "Person first Name: " + person.firstName );
+
+      for(let p in person) {
+        console.log( p + ":" + person[p] );
+      }
+      // person.firstName
+      // while, do-while, for
 
       for(let i = 0; i < students.length; ++i) {
-        console.log( students[i] );
+        if(i % 2 !== 0)
+          console.log( i + " - " + students[i] );
+      }
+
+      // for-of
+      console.log( "For-of loop:" );
+      for(let s of students) {
+        console.log( s );
+      }
+
+      // for-in
+      console.log( "For-in loop:" );
+      for(let i in students) {
+        if(i % 2 === 0)
+          console.log( i + " - " + students[i] );
       }
 
     </script>
