@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <table style="font-size: 30px;">
+        <tr>
+          <td id="cellWest">S</td>
+          <td><input type="button" value="<= =>"
+                onclick="cellsWEhandler()"
+             /></td>
+          <td id="cellEast">N</td>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+
+      function cellsWEhandler() {
+        console.log( "cellsWEhandler() has been invoked!" );
+
+        var a = document.getElementById("cellWest").innerHTML;
+        var b = document.getElementById("cellEast").innerHTML;
+        var temp = a;
+        a = b;
+        b = temp;
+
+        document.getElementById("cellWest").innerHTML = a;
+        document.getElementById("cellEast").innerHTML = b;
+        // console.log( document.getElementById("cellWest").innerHTML );
+        // console.log( document.getElementById("cellEast").innerHTML );
+      }
+
+      var a = 77;
+      var b = 55;
+      var temp = a;
+
+      a = b;
+      b = temp;
+
+      console.log( "a = " + a + " b = " + b );  // a = 55; b = 77;
+
+      let st1 = "Mark";
+      let st2 = "Lucy";
+      let st3 = "John";
+      let st4 = "Rosy";
+
+      let students = ["Mark", "Lucy", "John", "Rosy", "Mike"];
+                    //  0        1       2       3
+
+      for(let i = 0; i < students.length; ++i) {
+        console.log( students[i] );
+      }
+
+    </script>
+
+
+  </body>
+</html>
