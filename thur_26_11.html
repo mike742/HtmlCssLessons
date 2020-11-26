@@ -7,6 +7,9 @@
   <body>
 
     <script type="text/javascript">
+
+
+
           // D R Y
           let printStudents = function () {
             console.log("------------------------------------");
@@ -23,10 +26,23 @@
           }
 
           let sum = function(a, b) {
-            //let result = a + b;
-            // console.log("a + b = " + result);
             return a + b;
           }
+
+          let subs = function(a, b) {
+            return a - b;
+          }
+
+          let calc = function(a, b, act) { // act = '+', '-', '*' ...
+            if(act === '+') {
+              return sum(a, b);
+            }
+            if(act === '-') {
+              return subs(a, b);
+            }
+          }
+
+          console.log(calc(77, 55, '-'));
 
           let c = sum(5, 7);
           console.log(c);
