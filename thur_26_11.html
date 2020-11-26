@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+          // D R Y
+          let printStudents = function () {
+            console.log("------------------------------------");
+            for(let student of students) {
+              console.log(student);
+            }
+          }
+
+          let printStudentsParam = function (myArr) {
+            console.log("------------------------------------");
+            for(let student of myArr) {
+              console.log(student);
+            }
+          }
+
+          let sum = function(a, b) {
+            //let result = a + b;
+            // console.log("a + b = " + result);
+            return a + b;
+          }
+
+          let c = sum(5, 7);
+          console.log(c);
+          console.log(sum(5, 7));
+
+          console.log( sum(22, 33) );
+
+          let students = ["Mark", "Lucy", "John", "Rosy", "Mike"];
+
+          let print = printStudents;
+
+
+          students.push("Todd");
+          print();
+
+          students.unshift(111);
+          printStudentsParam(students);
+
+          students.shift();
+          printStudents();
+
+          students.pop();
+          printStudents();
+
+    </script>
+  </body>
+</html>
