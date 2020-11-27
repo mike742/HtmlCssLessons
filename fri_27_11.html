@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <input type="text" id="inputUserText" onkeyup="onkeypressHandler()" />
+    <br>
+    <p id="userOutput"></p>
+
+    <form>
+      <input type="text" name="inputName" value="">
+
+      <br><br>
+      <input type="radio" name="course" id="html" value="001-html">
+      <label for="html">HTML</label><br>
+
+      <input type="radio" name="course" id="java" value="002-java">
+      <label for="java">Java</label><br>
+
+      <input type="radio" name="course" id="javascript" value="003-JavaSript">
+      <label for="javascript">JavaScript</label><br>
+      <br><br>
+
+      <input type="button" onclick="btnHandler(this.form)" value="See User Info">
+    </form>
+
+    <script type="text/javascript">
+
+      let btnHandler = function(form) {
+
+        console.log( "Name : " +  form.elements['inputName'].value );
+        console.log( "Course : " +  form.elements['course'].value );
+      }
+
+      /*
+        var students = ['Mark', 'John', 'Lucy', 'Rosy', 'ddd'];
+
+        console.log(  students.length );
+
+        for(let i = 0; i < 5; ++i) {
+          document.write(  students[i] );
+          document.write('<br>');
+        }
+        */
+
+        let onkeypressHandler = function() {
+            document.getElementById('userOutput').innerHTML =
+              "<b>" + document.getElementById('inputUserText').value + "</b>";
+        }
+
+    </script>
+
+
+  </body>
+</html>
