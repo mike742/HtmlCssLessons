@@ -9,10 +9,10 @@
     <h1>Root calculator</h1>
 
     <label for="inputA">a:</label>
-    <input id="inputA" type="number" min="-99" max="99" />
+    <input id="inputA" name="a" type="number" min="-99" max="99" />
 
     <label for="inputB">b:</label>
-    <input id="inputB" type="number" min="-99" max="99" />
+    <input id="inputB" name="b" type="number" min="-99" max="99" />
 
     <hr>
     <button onclick="clickHandler()" type="button" name="button">Calculate</button>
@@ -26,16 +26,21 @@
 
     let inputA = document.getElementById('inputA');
     let inputB = document.getElementById('inputB');
+
     let result = document.getElementById('result');
 
-    function errorMessage(input, title) {
+    function errorMessage(element) {
       let errorMessage = '';
+      let input = element.value;
+      let title = element.name;
 
       if(input === "0"
         || input === ""
-        || !Number.isInteger(+input)
+        || !Number.isInteger(+input) // 3.14
         || +input > 99 || +input < -99) {
 
+        element.style.borderColor = "red"; // style="border-color: red"
+        // debugger;
         errorMessage += "Invalid entry for " + title +". ";
 
         if(input === "0") {
@@ -47,14 +52,17 @@
 
         errorMessage += "between -99 and 99.";
       }
+      else {
+        element.style.borderColor = "";
+      }
 
       return errorMessage;
     }
 
     function clickHandler() {
       //let input = inputA.value;
-      let errorA = errorMessage(inputA.value, 'a');
-      let errorB = errorMessage(inputB.value, 'b');
+      let errorA = errorMessage(inputA);
+      let errorB = errorMessage(inputB);
 
       result.innerHTML = errorA + "<br>" + errorB;
       console.log(errorA);
