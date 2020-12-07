@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>Root calculator</h1>
+
+    <label for="inputA">a:</label>
+    <input id="inputA" type="number" min="-99" max="99" />
+
+    <label for="inputB">b:</label>
+    <input id="inputB" type="number" min="-99" max="99" />
+
+    <hr>
+    <button onclick="clickHandler()" type="button" name="button">Calculate</button>
+
+    <p id="result"></p>
+
+  </body>
+
+  <script type="text/javascript">
+    // alert("");
+
+    let inputA = document.getElementById('inputA');
+    let inputB = document.getElementById('inputB');
+    let result = document.getElementById('result');
+
+    function errorMessage(input, title) {
+      let errorMessage = '';
+
+      if(input === "0"
+        || input === ""
+        || !Number.isInteger(+input)
+        || +input > 99 || +input < -99) {
+
+        errorMessage += "Invalid entry for " + title +". ";
+
+        if(input === "0") {
+          errorMessage += "a non-zero integer ";
+        }
+        else {
+          errorMessage += "an integer integer ";
+        }
+
+        errorMessage += "between -99 and 99.";
+      }
+
+      return errorMessage;
+    }
+
+    function clickHandler() {
+      //let input = inputA.value;
+      let errorA = errorMessage(inputA.value, 'a');
+      let errorB = errorMessage(inputB.value, 'b');
+
+      result.innerHTML = errorA + "<br>" + errorB;
+      console.log(errorA);
+    }
+
+  </script>
+
+</html>

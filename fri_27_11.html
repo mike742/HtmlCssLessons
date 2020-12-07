@@ -3,12 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+
+    <script type="text/javascript">
+
+
+
+    </script>
+
   </head>
   <body>
+  
+	<noscript>
+	  <p>
+		This web page uses JavaScript. For proper results,
+		you must use a web browser with JavaScript enabled.
+	  </p>
+	</noscript>
 
     <input type="text" id="inputUserText" onkeyup="onkeypressHandler()" />
     <br>
     <p id="userOutput"></p>
+    <hr>
+
+
 
     <form>
       <input type="text" name="inputName" value="">
@@ -40,11 +57,33 @@
     <input type="button" id="btnEnableButton" value="Enable Button See Info"
           onclick="btnEnableButtonHandler()" disabled >
 
-    <script type="text/javascript">
+
+
+    <script scr="" type="text/javascript">
+
+
+      if(0.1 + 0.2 === 0.3) {
+        console.log('True ' );
+      }
+      else {
+        console.log('False ' + (0.1 + 0.2));
+      }
+
+      if(0.2 + 0.3 === 0.5) {
+        console.log('True ' + (0.2 + 0.3));
+      }
+      else {
+        console.log('False');
+      }
+
 
       let btnEnableButtonHandler = function() {
         document.getElementById('btnEnableButton').disabled = true;
         document.getElementById('btnSeeInfo').disabled = false;
+      }
+
+      function main (args) {
+
       }
 
       let btnHandler = function(form) {
@@ -79,12 +118,14 @@
         */
 
         let onkeypressHandler = function() {
+
             document.getElementById('userOutput').innerHTML =
               "<b>" + document.getElementById('inputUserText').value + "</b>";
+
         }
 
     </script>
 
-
+    <!--  -->
   </body>
 </html>
