@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Story Generator</h1>
+
+    <div id="setup">
+        <form name="setupForm">
+          <label for="int1">label #1</label>
+          <input id="int1" /> <br>
+          <input /> <br>
+          <input /> <br>
+          <input /> <br>
+          <input /> <br>
+          <input /> <br>
+          <input /> <br>
+        </form>
+
+        <button name="btnDone" onclick="btnDoneHandler()">Done</button>
+        <button name="btnReset" onclick="btnResetHandler()">Reset</button>
+    </div>
+
+    <div id="story">
+      <p>qwerty....</p>
+      <form name="storyForm">
+        <input style="border: 0px" /> <br>
+        <input style="border: 0px" /> <br>
+        <input style="border: 0px" /> <br>
+        <input style="border: 0px" /> <br>
+        <input style="border: 0px" /> <br>
+        <input style="border: 0px" /> <br>
+        <input style="border: 0px" /> <br>
+      </form>
+      <button name="btnReturn" onclick="btnReturnHandler()">Return</button>
+    </div>
+
+    <script type="text/javascript">
+
+      let story = document.getElementById('story');
+      let setup = document.getElementById('setup');
+      story.style.display = 'none';
+
+
+      function btnDoneHandler() {
+        story.style.display = 'block';
+        setup.style.display = 'none';
+        /*
+        for(let el of document.setupForm.elements) {
+          console.log(el.value);
+        }
+        */
+
+        debugger;
+
+        for(let i = 0; i < document.setupForm.elements.length; ++i) {
+          // console.log(document.setupForm.elements[i].value);
+          document.storyForm.elements[i].value =
+          document.setupForm.elements[i].value
+        }
+
+
+
+      }
+
+      function btnReturnHandler() {
+        story.style.display = 'none';
+        setup.style.display = 'block';
+
+      }
+
+      function btnResetHandler() {
+
+      }
+
+    </script>
+
+
+  </body>
+</html>
