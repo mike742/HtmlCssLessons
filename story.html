@@ -9,13 +9,19 @@
 
     <div id="setup">
         <form name="setupForm">
-          <label for="int1">label #1</label>
+          <label for="int1">label #1</label><br>
           <input id="int1" /> <br>
+          <label for="int1">label #1</label><br>
           <input /> <br>
+          <label for="int1">label #1</label><br>
           <input /> <br>
+          <label for="int1">label #1</label><br>
           <input /> <br>
+          <label for="int1">label #1</label><br>
           <input /> <br>
+          <label for="int1">label #1</label><br>
           <input /> <br>
+          <label for="int1">label #1</label><br>
           <input /> <br>
         </form>
 
@@ -25,15 +31,14 @@
 
     <div id="story">
       <p>qwerty....</p>
-      <form name="storyForm">
-        <input style="border: 0px" /> <br>
-        <input style="border: 0px" /> <br>
-        <input style="border: 0px" /> <br>
-        <input style="border: 0px" /> <br>
-        <input style="border: 0px" /> <br>
-        <input style="border: 0px" /> <br>
-        <input style="border: 0px" /> <br>
-      </form>
+      Hello <span class="missing_text">  missing text  </span> World
+      <span class="missing_text"> missing text </span>
+      <span class="missing_text"> missing text </span>
+      <span class="missing_text"> missing text </span>
+      <span class="missing_text"> missing text </span>
+      <span class="missing_text"> missing text </span>
+      <span class="missing_text"> missing text </span>
+
       <button name="btnReturn" onclick="btnReturnHandler()">Return</button>
     </div>
 
@@ -53,15 +58,13 @@
         }
         */
 
+        //debugger;
+        var words = document.querySelectorAll(".missing_text");
+
         debugger;
-
         for(let i = 0; i < document.setupForm.elements.length; ++i) {
-          // console.log(document.setupForm.elements[i].value);
-          document.storyForm.elements[i].value =
-          document.setupForm.elements[i].value
+          words[i].innerHTML = document.setupForm.elements[i].value;
         }
-
-
 
       }
 
